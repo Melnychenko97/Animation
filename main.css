@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    height: 500px;
+    position: relative;
+    background-color: gray;
+    transition: background-color, 3s;
+}
+body:hover{
+    background-color: black;
+    transition: all 3s;
+}
+
+div {
+    box-sizing: border-box;
+    background-color: darkgoldenrod;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    /*transition-property: all;*/
+    /*transition-duration: 1s;*/
+    /*transition-timing-function: ease-in-out;*/
+    animation: rotating 4s infinite ease-in-out;
+}
+
+span {
+    background-color: inherit;
+    color: wheat;
+    font-size: 5em;
+}
+
+
+/*!*div:hover {*!*/
+    /*!*transition-property: all;*!*/
+    /*!*transition-duration: 1s;*!*/
+    /*!*transition-timing-function: ease-in-out;*!*/
+    /*!*width: 350px;*!*/
+    /*!*height: 350px;*!*/
+    /*!*border-radius: 80px;*!*/
+    /*!*background-color: aqua;*!*/
+    /*!*transform: translate(25%, 25%) rotate(360deg) scale(0.7);*!*/
+/*}*/
+
+
+@keyframes rotating{
+    0%{transform: rotate(0deg) scale(0.2) }
+    50%{transform: rotate(360deg) scale(0.8)}
+    100%{transform: rotate(0deg) scale(0.2)}
+}
+
